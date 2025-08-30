@@ -21,6 +21,7 @@ if __name__ == "__main__":
 
     embeddings = QwenEmbeddings(base_url="http://localhost:1234/v1")
 
+    # to work with qdrant instead https://python.langchain.com/docs/integrations/vectorstores/qdrant/
     vector_store = InMemoryVectorStore(embeddings)
     ids = vector_store.add_documents(documents=texts)
 
